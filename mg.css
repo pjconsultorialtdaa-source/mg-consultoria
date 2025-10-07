@@ -350,78 +350,6 @@ button {
 }
 
 /* ===================================
-   WHY M&A SECTION
-   =================================== */
-
-.why-ma {
-    padding: var(--spacing-3xl) var(--spacing-md);
-}
-
-.section-title {
-    font-size: var(--font-size-4xl);
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.cards-container {
-    max-width: 64rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.card {
-    background: var(--color-background);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow var(--transition-base);
-}
-
-.card:hover {
-    box-shadow: var(--shadow-md);
-}
-
-.card-title {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-sm);
-}
-
-.card-text {
-    color: var(--color-muted-foreground);
-    line-height: 1.7;
-}
-
-/* ===================================
-   CONTACT SECTION
-   =================================== */
-
-.contact {
-    padding: var(--spacing-3xl) var(--spacing-md);
-    background: var(--color-primary-light);
-}
-
-.contact-content {
-    max-width: 48rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-title {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-md);
-}
-
-.contact-text {
-    font-size: var(--font-size-lg);
-    color: var(--color-muted-foreground);
-    margin-bottom: var(--spacing-lg);
-}
-
-/* ===================================
    BLOG HEADER
    =================================== */
 
@@ -435,11 +363,7 @@ button {
 .blog-header-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0.95),
-        rgba(255, 255, 255, 0.7)
-    );
+    background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.7));
     display: flex;
     align-items: center;
 }
@@ -496,7 +420,7 @@ button {
 .article-category {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: rgba(59, 159, 217, 0.1);
+    background: rgba(59,159,217,0.1);
     color: var(--color-primary);
     font-size: 0.75rem;
     font-weight: 600;
@@ -553,29 +477,77 @@ button {
 }
 
 /* ===================================
-   BLOG CTA
+   MINI FORM SECTION
    =================================== */
 
-.blog-cta {
-    padding: var(--spacing-2xl) var(--spacing-md);
-    background: var(--color-primary-light);
+.mini-form {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background: var(--color-muted);
 }
 
-.cta-content {
-    max-width: 48rem;
+.mini-form .container {
+    max-width: 40rem;
     margin: 0 auto;
     text-align: center;
 }
 
-.cta-title {
+.form-title {
     font-size: var(--font-size-3xl);
+    font-weight: 700;
     margin-bottom: var(--spacing-sm);
 }
 
-.cta-text {
-    font-size: var(--font-size-lg);
+.form-subtitle {
+    font-size: var(--font-size-base);
     color: var(--color-muted-foreground);
     margin-bottom: var(--spacing-lg);
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.form-content input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: var(--font-size-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: border var(--transition-base), box-shadow var(--transition-base);
+}
+
+.form-content input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 159, 217, 0.2);
+}
+
+.form-content .btn {
+    width: 100%;
+    max-width: 200px;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.form-content .btn:hover {
+    background: var(--color-primary-hover);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+}
+
+.form-message {
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    font-weight: 500;
 }
 
 /* ===================================
@@ -639,15 +611,15 @@ button {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
     }
-    
+
     .hero-title {
         font-size: var(--font-size-4xl);
     }
-    
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .articles-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -666,53 +638,61 @@ button {
         border-bottom: 1px solid var(--color-border);
         box-shadow: var(--shadow-lg);
     }
-    
+
     .nav.active {
         display: flex;
     }
-    
+
     .mobile-menu {
         display: block;
     }
-    
+
     .hero {
         padding: var(--spacing-xl) var(--spacing-md);
     }
-    
+
     .hero-title {
         font-size: var(--font-size-3xl);
     }
-    
+
     .hero-description {
         font-size: var(--font-size-base);
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .section-title {
         font-size: var(--font-size-3xl);
     }
-    
+
     .contact-title {
         font-size: var(--font-size-3xl);
     }
-    
+
     .blog-header {
         height: 300px;
     }
-    
+
     .blog-header-title {
         font-size: var(--font-size-4xl);
     }
-    
+
     .blog-header-description {
         font-size: var(--font-size-base);
     }
-    
+
     .articles-grid {
         grid-template-columns: 1fr;
+    }
+
+    .form-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .form-subtitle {
+        font-size: var(--font-size-sm);
     }
 }
 
@@ -720,23 +700,23 @@ button {
     .hero-title {
         font-size: var(--font-size-2xl);
     }
-    
+
     .hero-buttons {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .section-title {
         font-size: var(--font-size-2xl);
     }
-    
+
     .contact-title {
         font-size: var(--font-size-2xl);
     }
-    
+
     .blog-header-title {
         font-size: var(--font-size-3xl);
     }
