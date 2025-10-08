@@ -46,6 +46,8 @@
     <section class="blog-articles">
         <div class="container">
             <div class="articles-grid">
+
+                <!-- Cada botão agora rola até o formulário -->
                 <article class="article-card">
                     <div class="article-content">
                         <span class="article-category">Fundamentos</span>
@@ -58,7 +60,7 @@
                             <div class="meta-item"><span>8 min</span></div>
                         </div>
                     </div>
-                    <button class="article-btn" onclick="alert('Em breve este artigo estará disponível!')">Ler artigo →</button>
+                    <button class="article-btn" onclick="irParaFormulario()">Ler artigo →</button>
                 </article>
 
                 <article class="article-card">
@@ -73,7 +75,7 @@
                             <div class="meta-item"><span>12 min</span></div>
                         </div>
                     </div>
-                    <button class="article-btn" onclick="alert('Em breve este artigo estará disponível!')">Ler artigo →</button>
+                    <button class="article-btn" onclick="irParaFormulario()">Ler artigo →</button>
                 </article>
 
                 <article class="article-card">
@@ -88,7 +90,7 @@
                             <div class="meta-item"><span>15 min</span></div>
                         </div>
                     </div>
-                    <button class="article-btn" onclick="alert('Em breve este artigo estará disponível!')">Ler artigo →</button>
+                    <button class="article-btn" onclick="irParaFormulario()">Ler artigo →</button>
                 </article>
 
                 <article class="article-card">
@@ -103,7 +105,7 @@
                             <div class="meta-item"><span>10 min</span></div>
                         </div>
                     </div>
-                    <button class="article-btn" onclick="alert('Em breve este artigo estará disponível!')">Ler artigo →</button>
+                    <button class="article-btn" onclick="irParaFormulario()">Ler artigo →</button>
                 </article>
 
                 <article class="article-card">
@@ -118,7 +120,7 @@
                             <div class="meta-item"><span>11 min</span></div>
                         </div>
                     </div>
-                    <button class="article-btn" onclick="alert('Em breve este artigo estará disponível!')">Ler artigo →</button>
+                    <button class="article-btn" onclick="irParaFormulario()">Ler artigo →</button>
                 </article>
 
                 <article class="article-card">
@@ -133,14 +135,15 @@
                             <div class="meta-item"><span>13 min</span></div>
                         </div>
                     </div>
-                    <button class="article-btn" onclick="alert('Em breve este artigo estará disponível!')">Ler artigo →</button>
+                    <button class="article-btn" onclick="irParaFormulario()">Ler artigo →</button>
                 </article>
+
             </div>
         </div>
     </section>
 
     <!-- Mini Formulário -->
-    <section class="mini-form">
+    <section id="formulario" class="mini-form">
         <div class="container">
             <h2 class="form-title">Entre em Contato com a MG Consultoria</h2>
             <p class="form-subtitle">Deixe seu nome e e-mail que entraremos em contato com você!</p>
@@ -150,14 +153,6 @@
                 <button type="submit" class="btn">Enviar</button>
             </form>
             <p id="mensagem" class="form-message"></p>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="blog-cta">
-        <div class="container">
-            <div class="cta-content">
-            </div>
         </div>
     </section>
 
@@ -176,11 +171,18 @@
 
     <!-- JavaScript -->
     <script>
+        // Função para rolar suavemente até o formulário
+        function irParaFormulario() {
+            const formSection = document.getElementById('formulario');
+            formSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
         function toggleMenu() {
             const nav = document.querySelector('.nav');
             nav.classList.toggle('active');
         }
 
+        // Salvamento do formulário
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const nome = document.getElementById('nome').value;
@@ -194,6 +196,5 @@
 
 </body>
 </html>
-
 
 
